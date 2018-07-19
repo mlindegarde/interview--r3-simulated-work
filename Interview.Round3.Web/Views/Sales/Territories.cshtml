@@ -1,0 +1,68 @@
+﻿@model List<Interview.Round3.Web.Models.SalesTerritoryViewModel>
+
+@{
+    ViewData["Title"] = "Sales Territories";
+}
+
+<!--
+    Notice that there is no logic in the view beyond what is required to display the data.
+    Any sorting / filtering should happen in the controller or other lower level code.
+    The controller should provide exactly the data the view needs via a ViewModel.
+        
+    Also note that this view does not use the HomeController.  Sales data does not relate
+    to the HomeController in any way.  As such, it should have its own controller.
+-->
+
+<div class="row">
+    <div class="col-md-12">
+        <h2>@ViewData["Title"]</h2>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <table class="table">
+            <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model[0].SalesTerritoryId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model[0].GeographyId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model[0].Country)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model[0].Region)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model[0].City)
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SalesTerritoryId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.GeographyId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Country)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Region)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.City)
+                    </td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+</div>

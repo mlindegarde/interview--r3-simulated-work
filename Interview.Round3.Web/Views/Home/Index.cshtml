@@ -1,0 +1,62 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <h1>Welcome...</h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-8">
+        <h2>Your Task</h2>
+        <p>
+            You've made it this far, that means we at least think you can code.  Now we would like to see what you can do in
+            a more realistic work environment.
+        </p>
+        <p>
+            Using SQL and ASP.NET MVC We would like you to display sales data from the AdventureWorks database.  The user 
+            should be able to filter by country, product, or both.  We do not care how you implement the filtering:  that is up 
+            to you.  You could simply provide a list of links to the data for each country, leverage a drop down list... whatever
+            you think is best.
+        </p>
+        <p>
+            Here is a SQL query to get you started:
+            <pre><code>SELECT
+    c.EnglishProductSubcategoryName as Category, 
+    p.EnglishProductName as Product, 
+    t.SalesTerritoryCountry, 
+    s.*
+FROM DimProduct p
+    inner join DimProductSubcategory c on p.ProductSubcategoryKey = c.ProductSubcategoryKey
+    inner join FactInternetSales s on p.ProductKey = s.ProductKey
+    inner join DimSalesTerritory t on s.SalesTerritoryKey = t.SalesTerritoryKey</code></pre>
+        </p>
+        <p>
+            You can explore the database using SQL Server Management Studio.  Here is the information you need to access it:
+            <ul>
+                <li>Server: 10.5.0.13</li>
+                <li>Username: InterviewUser</li>
+                <li>Password: InterviewUser</li>
+            </ul>
+            You can find example connection strings in the source code.
+        </p>
+        <p>
+            We are more interested in seeing quality code than having you race to complete the task.  Take your time and don't be
+            afraid to ask us questions or to use your favorite search engine to find answers.  Good luck.
+        </p>
+    </div>
+    <div class="col-md-4">
+        <h2>Helpful Hints</h2>
+        <ul>
+            <li>Notice that this site uses bootstrap to support a responsive layout.  Please leverage that in any new page you add.</li>
+            <li>Read the comments in the source code.  They will point you in the right direction (mostly...).</li>
+            <li>Don't be afraid to ask questions.</li>
+            <li>We want to see some indication of <b>understanding</b>.  While copying and pasting is quick, it may not give you the chance to demonstrate everything you know.</li>
+            <li>Don't hesitate to fix bugs / problems you find in code.</li>
+            <li>If you know a better way to do something than what you see in the project, go for it.  Impress us.</li>
+            <li>Focus on one filter at a time: beginning to end.  Then move on to the others (if time allows).</li>
+            <li><code>Html.DropDownList()</code></li>
+        </ul>
+    </div>
+</div>

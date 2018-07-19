@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentAssertions" Version="5.4.1" />
+    <PackageReference Include="XUnit" Version="2.4.0" />
+    <PackageReference Include="XUnit.Runner.VisualStudio" Version="2.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Interview.Round3.Model\Interview.Round3.Model.csproj" />
+    <ProjectReference Include="..\Interview.Round3.Persistence\Interview.Round3.Persistence.csproj" />
+  </ItemGroup>
+
+</Project>
