@@ -31,7 +31,6 @@ Obj/
 .vs/
 /wwwroot/dist/
 /ClientApp/dist/
-dist/
 
 # MSTest test Results
 [Tt]est[Rr]esult*/
@@ -245,7 +244,6 @@ bower_components
 package-lock.json
 aot/*
 yarn.lock
-dist/
 # FAKE - F# Make
 .fake/
 
